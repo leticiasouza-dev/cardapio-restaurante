@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-// import styles from '@/styles/Home.module.css'
+import Image from 'next/image';
+import Banner from '../assets/banner.png'
+import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +15,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <header className={styles.banner}>
+        <Image src={Banner} alt='banner'/>
+        <div className={styles.container}>
+          <h1>restaurante</h1>
+
+          <p>
+            De pratos clássicos a criações surpreendentes, nosso cardápio é um requinte de sabores refinados
+          </p>
+        </div>
+      </header>
       
             
 
