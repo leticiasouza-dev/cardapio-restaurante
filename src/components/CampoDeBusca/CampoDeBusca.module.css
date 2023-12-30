@@ -1,0 +1,29 @@
+.campoDeBusca{
+    max-width: 1024px;
+    height: 3rem;
+    border: 2px solid #D1D1D1;
+    border-radius: 1rem;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.campoDeBusca img{
+    width: 1.8rem;
+    height: 1.8rem; 
+    margin: 0 0.5rem;
+}
+
+.campoDeBusca input{
+    width: 100%;
+
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width:768px){
+    .campoDeBusca{
+        margin: 0 1rem;
+    }
+}
