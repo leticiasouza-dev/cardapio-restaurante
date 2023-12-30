@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Banner from '../assets/banner.png'
 import styles from '@/styles/Home.module.css'
 
+import Categorias from '@/components/Categorias/Categorias';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -26,6 +28,10 @@ export default function Home() {
           </p>
         </div>
       </header>
+
+      <body>
+        <Categorias />
+      </body>
       
             
 

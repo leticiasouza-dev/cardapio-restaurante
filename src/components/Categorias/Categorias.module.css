@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@600&display=swap');
+
+.containerCategorias{
+    max-width: 1024px;
+
+    padding: 3rem 0 2rem 0;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.containerCategorias button{
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #F0F0F0; 
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    width: 9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    padding: 0.8rem 1rem;
+}
+
+.containerCategorias button > img{
+    width: 2rem;
+    height: 1.5rem;
+
+    padding-right: 8px;
+}
+
+.containerCategorias button:hover{
+    background-color: #DAA520;
+}
+
+@media screen and (max-width: 350px){
+    .containerCategorias{
+        padding: 2rem 10px;
+
+        gap: 2px;
+    }
+}
+
+@media screen and (min-width: 351px) and (max-width: 768px){
+    .containerCategorias{
+        padding: 2rem 1rem;
+        gap: 5px;
+    }
+}
