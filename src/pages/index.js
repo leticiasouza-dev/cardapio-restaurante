@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css'
 
 import Categorias from '@/components/Categorias/Categorias';
 import CampoDeBusca from '@/components/CampoDeBusca/CampoDeBusca';
+import Cards from '@/components/Cards/Cards';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,7 +34,15 @@ export default function Home() {
       <body>
         <Categorias />
         <CampoDeBusca />
+        
+        <section className={styles.sessaoCardapio}>
+          <h3>Cardápio</h3>
 
+          <section className={styles.sessaoCardapio_Cards}>
+            <Cards />
+          </section>
+        </section>
+        
       </body>
       
             

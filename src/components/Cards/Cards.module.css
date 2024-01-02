@@ -1,0 +1,28 @@
+.Card{
+    width: 18rem;
+    height: 60vh;
+    position: relative;
+
+    background-color: red;
+}
+
+.imagem{
+    width: 100%;
+    height: 50%;
+}
+
+.textos{
+    padding: 1rem 0.8rem;
+}
+
+.textos h4{
+    padding-bottom: 0.8rem;
+}
+
+.textos p{
+    padding-top: 0.8rem;
+}
+
+.valor{
+    text-align: end;
+}
