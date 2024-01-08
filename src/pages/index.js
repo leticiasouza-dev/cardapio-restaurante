@@ -8,9 +8,18 @@ import Categorias from '@/components/Categorias/Categorias';
 import CampoDeBusca from '@/components/CampoDeBusca/CampoDeBusca';
 import Cards from '@/components/Cards/Cards';
 
+import { filtrarProdutos, buscarProdutos, produtosEntradas } from '@/service';
+import { useState } from 'react';
+import { produtos } from '@/data/data-produtos';
+import imagemTeste from '@/assets/img/agua.jpg'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  // const [dadosFiltrados, setdadosFiltrados] = useState(produtosEntradas);
+  // const [textoBuscaDigitada,  ]
+
   return (
     <>
       <Head>
@@ -39,7 +48,25 @@ export default function Home() {
           <h3>Cardápio</h3>
 
           <section className={styles.sessaoCardapio_Cards}>
-            <Cards />
+            {/* {produtos.map((produto) => {
+              return(
+                <>
+                <Cards key={produto.id} imagem ={produto.imagem}  nome={produto.nome}  descricao={produto.descricao}/>
+                </>
+              )
+            })
+
+            } */}
+
+            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
+            
+
+            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
+            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
+
+            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
+            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
+
           </section>
         </section>
         

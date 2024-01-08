@@ -1,19 +1,18 @@
 import React from "react";
 import styles from './Cards.module.css'
-import imagemTeste from '../../assets/img/carpaccio.jpg';
 
 import Image from "next/image";
 
-function Cards (props){
+function Cards (produto){
     return(
         <article className={styles.Card}>
-            <Image src={props.imagem} className={styles.imagem}/>
+            <Image src={produto.imagem} className={styles.imagem}/>
 
             <div className={styles.textos}>
-                <h4>{props.nome}</h4>
-                <span>{props.categoria}</span>
-                <p>{props.descricao}</p>
-                <p className={styles.valor}>{props.valor}</p>
+                <h4>{produto.nome}</h4>
+                <span>{produto.categoria}</span>
+                <p>{produto.descricao}</p>
+                <p className={styles.valor}>{produto.valor}</p>
             </div>
         </article>
     )
