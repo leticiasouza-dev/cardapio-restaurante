@@ -48,24 +48,25 @@ export default function Home() {
           <h3>Cardápio</h3>
 
           <section className={styles.sessaoCardapio_Cards}>
-            {/* {produtos.map((produto) => {
+            {produtos.map((produto) => {
               return(
                 <>
-                <Cards key={produto.id} imagem ={produto.imagem}  nome={produto.nome}  descricao={produto.descricao}/>
+                <Cards 
+                  key={produto.id} 
+                  imagem ={produto.imagem}  
+                  nome={produto.nome}  
+                  categoria={produto.categoria}
+                  descricao={produto.descricao}
+                  valor={produto.preco}
+                  />
+                  
                 </>
               )
             })
 
-            } */}
+            }
 
-            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
-            
-
-            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
-            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
-
-            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
-            <Cards imagem={imagemTeste} nome='lele' categoria='bebida' descricao='lorem11111111111111111111111111111111111111111' valor='21,99'/>
+           
 
           </section>
         </section>
