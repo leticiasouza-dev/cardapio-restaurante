@@ -8,7 +8,7 @@ export const buscarProdutos = (textoDigitado) => {  // função para a busca de 
     )
 }
 
-export const filtrarProdutos = (categoria) => { //  função para a filtragem de produto de acordo co, sua categoria
+export const filtrarProdutos = (categoria) => { //  função para a filtragem de produto de acordo com, sua categoria
     return produtos.filter((produto) => produto.categoria === categoria);
 }
 

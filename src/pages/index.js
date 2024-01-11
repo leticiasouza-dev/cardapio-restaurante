@@ -17,8 +17,16 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  // const [dadosFiltrados, setdadosFiltrados] = useState(produtosEntradas);
-  // const [textoBuscaDigitada,  ]
+  const [dadosFiltrados, setDadosFiltrados] = useState(produtosEntradas);
+  const [textoBuscaDigitada,  setTextoBuscaDigitada] = useState();
+
+  const [botaoClicado, setBotaoClicado] = useState("Entradas");
+
+  
+  function handleFiltro(categoria){
+    setDadosFiltrados(filtrarProdutos(categoria));
+    setBotaoClicado(categoria);
+  }
 
   return (
     <>
@@ -41,14 +49,19 @@ export default function Home() {
       </header>
 
       <body>
-        <Categorias />
-        <CampoDeBusca />
+        <Categorias 
+          handleFiltro={handleFiltro}
+        />
+
+        <CampoDeBusca 
+          
+        />
         
         <section className={styles.sessaoCardapio}>
           <h3>Cardápio</h3>
 
           <section className={styles.sessaoCardapio_Cards}>
-            {produtos.map((produto) => {
+            {dadosFiltrados.map((produto) => {
               return(
                 <>
                 <Cards 
