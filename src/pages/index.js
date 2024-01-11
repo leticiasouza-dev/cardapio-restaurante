@@ -22,8 +22,14 @@ export default function Home() {
 
   const [botaoClicado, setBotaoClicado] = useState("Entradas");
 
+  function handleBusca(textoDigitado){
+    setTextoBuscaDigitada(textoDigitado);
+    setDadosFiltrados(buscarProdutos(textoDigitado));
+    setBotaoClicado("")
+  }
   
   function handleFiltro(categoria){
+    setTextoBuscaDigitada("");
     setDadosFiltrados(filtrarProdutos(categoria));
     setBotaoClicado(categoria);
   }
@@ -54,7 +60,8 @@ export default function Home() {
         />
 
         <CampoDeBusca 
-          
+          textoBuscaDigitada={textoBuscaDigitada}
+          handleBusca={handleBusca}
         />
         
         <section className={styles.sessaoCardapio}>

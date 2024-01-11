@@ -5,13 +5,16 @@ import Image from "next/image";
 
 import lupaBusca from '@/assets/lupa.png'
 
-function CampoDeBusca(){
+function CampoDeBusca({textoBuscaDigitada, handleBusca}){
     return(
         <div className={styles.campoDeBusca}>
             <Image src={lupaBusca}/>
 
             <input 
-            placeholder="Pesquise aqui um dos pratos do nosso cardápio"
+                type="text"
+                value={textoBuscaDigitada}
+                placeholder="Pesquise aqui um dos pratos do nosso cardápio"
+                onChange={(event) => handleBusca(event.target.value)}
             />
         </div>
     )
